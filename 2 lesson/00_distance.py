@@ -12,9 +12,16 @@ sites = {
 # Составим словарь словарей расстояний между ними
 # расстояние на координатной сетке - корень из (x1 - x2) ** 2 + (y1 - y2) ** 2
 
-distances = {}
+distances = dict()
 
-# TODO здесь заполнение словаря
+moscow = sites['Moscow']
+london = sites['London']
+paris = sites['Paris']
+
+moscow_london = (((moscow[0]-london[0])**2) + ((moscow[1]-london[1])**2)**.5)
+moscow_paris = (((moscow[0]-paris[0])**2) + ((moscow[1]-paris[1])**2)**.5)
+london_paris = (((london[0]-paris[0])**2)+((london[1]-paris[1])**2)**.5)
+distances = {'Москва - Лондон' : moscow_london, 'Москва - Париж' : moscow_paris, 'Лондон - Париж' : london_paris}
 
 print(distances)
 
