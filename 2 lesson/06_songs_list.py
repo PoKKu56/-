@@ -45,3 +45,8 @@ violator_songs_dict = {
 #   А другие три песни звучат ХХХ минут
 
 # TODO здесь ваш код
+first_song = violator_songs_dict['Sweetest Perfection']
+second_song = violator_songs_dict['Policy of Truth']
+third_song = violator_songs_dict['Blue Dress']
+summary = first_song + second_song + third_song
+print('Общее время прослушивания равно ', summary.__round__(2))
