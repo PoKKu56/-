@@ -36,7 +36,12 @@ print(check <= radius)
 point_2 = (30, 30)
 # Если точка point_2 лежит внутри круга (radius = 42), то выведите на консоль True,
 # Или False, если точка лежит вовне круга.
-# TODO здесь ваш код
+x1 = point_2[0]
+y2 = point_2[1]
+check1 = ((x1**2)+(y2**2)**.5)
+check1.__round__(1)
+print(check1)
+print(check1 <= radius)
 
 # Пример вывода на консоль:
 #
