@@ -21,6 +21,12 @@ violator_songs_list = [
 # Лучше заранее вычислить необходимое, а затем в print(xxx, yyy, zzz)
 
 # TODO здесь ваш код
+x = violator_songs_list[3]
+y = violator_songs_list[5]
+z = violator_songs_list[8]
+summary = x[1] + y[1] + z[1]
+print('Общее время прослушивания этих треков = ', summary.__round__(2))
+
 
 # Есть словарь песен группы Depeche Mode
 violator_songs_dict = {
