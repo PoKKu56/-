@@ -22,3 +22,12 @@ secret_message = [
 # Если нужны вычисления и разные пробы - делайте это в консоли пайтона, тут нужен только результат
 
 # TODO вывести расшифрованное сообщение
+how_much = len(secret_message[4])
+print(how_much)
+first_word = secret_message[0][3]
+second_word = secret_message[1][9:13]
+third_word = secret_message[2][5:14:2]
+fourth_word = secret_message[3][12:6:-1]
+fith_word = secret_message[4][20:15:-1]
+print('Первое слово: ', first_word , 'Второе слово: ', second_word, 'Третье слово: ',
+      third_word, 'Четвертое слово: ', fourth_word, 'Пятое слово: ', fith_word)
