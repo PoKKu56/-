@@ -55,13 +55,17 @@ table_code = goods['Стол']
 print('Код', table_code)
 table_item_first = store[table_code][0] # Первая строка столов
 table_item_second = store[table_code][1] # Вторая строка столов
-print(table_item_first)
 table_quantity_first = table_item_first['quantity'] # Кол-во первой строки столов
-print(table_quantity_first)
 table_price_first = table_item_first['price'] # Цена первой строки столов
-print(table_price_first)
-table_all_price_first = table_quantity_first * table_price_first
-print(table_all_price_first)
+table_all_price_first = table_quantity_first * table_price_first # Цена = кол-во * цена(за один товар)
+print('Цена за товар первой строки столов: ', table_all_price_first)
+table_quantity_second = table_item_second['quantity'] # Кол-во второй строки
+table_price_second = table_item_second['price'] # Цена за один товар второй строки
+table_all_price_second = table_price_second * table_quantity_second # Общая цена за вторую строку Цена = кол-во * цена(за один товар)
+print('Цена за товар второй строки столов: ', table_all_price_second)
+table_all_price = table_all_price_second + table_all_price_first # Вывод общей цены за все столы.
+print('Цена за все столы: ', table_all_price)
+
 
 
 ##########################################################################################
