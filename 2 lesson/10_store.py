@@ -51,6 +51,19 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 
 # TODO здесь ваш код
 
+table_code = goods['Стол']
+print('Код', table_code)
+table_item_first = store[table_code][0] # Первая строка столов
+table_item_second = store[table_code][1] # Вторая строка столов
+print(table_item_first)
+table_quantity_first = table_item_first['quantity'] # Кол-во первой строки столов
+print(table_quantity_first)
+table_price_first = table_item_first['price'] # Цена первой строки столов
+print(table_price_first)
+table_all_price_first = table_quantity_first * table_price_first
+print(table_all_price_first)
+
+
 ##########################################################################################
 # ВНИМАНИЕ! После того как __ВСЯ__ домашняя работа сделана и запушена на сервер,         #
 # нужно зайти в ЛМС (LMS - Learning Management System ) по адресу http://go.skillbox.ru  #
