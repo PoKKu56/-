@@ -49,7 +49,8 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 # WARNING для знающих циклы: БЕЗ циклов. Да, с переменными; да, неэффективно; да, копипаста.
 # Это задание на ручное вычисление - что бы потом понять как работают циклы и насколько с ними проще жить.
 
-# TODO здесь ваш код
+
+# Столы
 
 table_code = goods['Стол']
 print('Код', table_code)
@@ -66,6 +67,40 @@ print('Цена за товар второй строки столов: ', table
 table_all_quantity = table_quantity_first + table_quantity_second; # Вывод общего количества столов.
 table_all_price = table_all_price_second + table_all_price_first # Вывод общей цены за все столы.
 print('Столы - ', table_all_quantity, 'шт., общая стоимость - ',table_all_price, 'руб.')
+
+# Работаем с диванами
+
+sofa_code = goods['Диван'] # Присвоили код
+sofa_first_item = store[sofa_code][0] # Первая строка
+sofa_first_quantity = sofa_first_item['quantity'] # Диван количество первой строки
+sofa_first_price = sofa_first_item['price'] # Диван цена первой строки
+sofa_first_all_price = sofa_first_price * sofa_first_quantity # Вычисление суммы первой строки
+sofa_second_item = store[sofa_code][1] # Вторая строка
+sofa_second_quantity = sofa_second_item['quantity'] # Кол-во второй строки
+sofa_second_price = sofa_second_item['price'] # Цена за одну вещь
+sofa_second_all_price = sofa_second_price * sofa_second_quantity # Вторая строка общая цена
+sofa_all_price = sofa_second_all_price + sofa_first_all_price # Цена за все диваны
+sofa_all_quantity = sofa_second_quantity + sofa_first_quantity # Количество диванов
+print('Диван - ', sofa_all_quantity, 'шт. , общая цена = ',sofa_all_price, 'руб.')
+
+# Стулья
+
+chair_code = goods['Стул'] # Присваиваем код
+chair_first_line = store[chair_code][0] # Первая строка
+chair_second_line = store[chair_code][1] # Вторая строка
+chair_third_line = store[chair_code][2] # Третья строка
+chair_first_quantity = chair_first_line['quantity'] # Количество стульев в первой строке
+chair_second_quantity = chair_second_line['quantity'] # Количество стульев во второй строке
+chair_third_quantity = chair_third_line['quantity'] # Количество стульев в третьей строке
+chair_first_price = chair_first_line['price'] # Цена стульев из первой строки
+chair_second_price = chair_second_line['price'] # Цена стульев из второй строки
+chair_third_price = chair_third_line['price'] # Цена стульев третьей строки
+chair_first_all_price = chair_first_quantity * chair_first_price # Цена за все стулья первой строки
+chair_second_all_price = chair_second_quantity * chair_second_quantity # Цена за все стулья второй строки
+chair_third_all_price = chair_third_quantity * chair_third_price # Цена за все стулья третьей строки
+chair_all_price = chair_third_all_price + chair_second_all_price + chair_third_all_price # Общая сумма за стулья
+chair_all_quantity = chair_first_quantity + chair_second_quantity + chair_third_quantity # Общее количество стульев
+print('Стулья - ', chair_all_quantity, 'шт. , общая стоимость - ', chair_all_price, 'руб.')
 
 
 
