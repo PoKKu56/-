@@ -63,8 +63,9 @@ table_quantity_second = table_item_second['quantity'] # Кол-во второй
 table_price_second = table_item_second['price'] # Цена за один товар второй строки
 table_all_price_second = table_price_second * table_quantity_second # Общая цена за вторую строку Цена = кол-во * цена(за один товар)
 print('Цена за товар второй строки столов: ', table_all_price_second)
+table_all_quantity = table_quantity_first + table_quantity_second; # Вывод общего количества столов.
 table_all_price = table_all_price_second + table_all_price_first # Вывод общей цены за все столы.
-print('Цена за все столы: ', table_all_price)
+print('Столы - ', table_all_quantity, 'шт., общая стоимость - ',table_all_price, 'руб.')
 
 
 
